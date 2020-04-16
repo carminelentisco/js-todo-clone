@@ -16,7 +16,7 @@ $( document ).ready( function() {
     }
 
     // Rimozione items
-    $('.list li i').click(function(){
+    $('body').on('click', '.list li i', function(){
         $(this).parent().remove();
     });
     
