@@ -17,8 +17,13 @@ $( document ).ready( function() {
 
     // Rimozione items
     $('body').on('click', '.list li i', function(){
-        $(this).parent().remove();
+        $(this).parent().slideUp();
     });
+
+    $('body').on('click', '.list li ', function(){
+        $(this).parent().addClass(buy);
+    });
+    
     
     var elementInput = $('.add-element');
     // Aggingi un elemento tramite l'input 
