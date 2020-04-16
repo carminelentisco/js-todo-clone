@@ -16,10 +16,16 @@ body {
     background-color: rgb(0, 183, 255);
 }
 
+/* --- UTILITY --- */
+
+.width_50 {
+    width: 50%;
+}
+
 /* ---------- APP ---------- */
 
 #app {
-    max-width: 600px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -28,6 +34,15 @@ body {
     text-align: center;
     font-weight: 700;
     margin: 30px 0 20px 0;
+}
+
+
+/* --- MAIN --- */
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .input-container {
@@ -44,6 +59,7 @@ body {
     border-radius: 5px;
     outline: none;
     cursor: pointer;
+    transition: box-shadow .4s;
 }
 
 .template {
@@ -54,9 +70,9 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    margin: 0 0 10px 0;
+    padding: 10px 10px;
     border-bottom: 1px solid #fff;
+    transition: background .4s;
 }
 
 .list li:last-child {
@@ -65,5 +81,26 @@ body {
 
 .list li i {   
     cursor: pointer;
+    transition: transform .4s;
 }
 
+.list li:hover {
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.list li i:hover {
+    transform: scale(1.5);
+}
+
+.add-element:hover,
+.add-element:focus {
+    box-shadow: 0 0 15px #fff;
+}
+
+/*Debug*/
+
+.buy {
+    text-decoration: line-through;
+}
