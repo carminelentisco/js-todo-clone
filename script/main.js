@@ -15,17 +15,19 @@ $( document ).ready( function() {
         list.append(elementList);
     }
 
+    var app = $('body');
+
     // Rimozione items
-    $('body').on('click', '.list li i', function(){
+    app.on('click', '.list li i', function(){
         $(this).parent().slideUp();
     });
 
-    $('body').on('click', '.list li ', function(){
-        $(this).parent().addClass(buy);
+    app.on('click', '.list li', function(){
+        $(this).toggleClass('buy');
     });
-    
-    
+
     var elementInput = $('.add-element');
+    
     // Aggingi un elemento tramite l'input 
     elementInput.keyup(function (e) { 
 
